@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GroupieTrackers Artists</title>
+    <style>
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .artist-card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .artist-card img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>GroupieTrackers Artists</h1>
+    <div class="artist-grid">
+        {{range .}}
+        <div class="artist-card">
+            <img src="{{.Image}}" alt="{{.Name}}" />
+            <h2>{{.Name}}</h2>
+            <p>Members: {{range .Members}}{{.}}, {{end}}</p>
+            <p>Creation Date: {{.CreationDate}}</p>
+            <p>First Album: {{.FirstAlbum}}</p>
+            <p>Locations: <a href="{{.Locations}}">View Locations</a></p>
+            <p>Concert Dates: <a href="{{.ConcertDates}}">View Concert Dates</a></p>
+            <p>Relations: <a href="{{.Relations}}">View Relations</a></p>
+        </div>
+        {{end}}
+    </div>
+</body>
+</html>
