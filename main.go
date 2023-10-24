@@ -112,6 +112,10 @@ func main() {
 //serves and target css files
 	fss := http.FileServer((http.Dir("ui")))
 	http.Handle("/ui/styles/", http.StripPrefix("/ui/", fss))
+
+	//serving images
+	img := http.FileServer((http.Dir("ui")))
+	http.Handle("/ui/images/", http.StripPrefix("/ui/", img))
 	// starting our server
 	log.Println("Starting Server :http://localhost:8080")
 	err := http.ListenAndServe(":8080", nil)
