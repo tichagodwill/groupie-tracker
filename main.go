@@ -369,13 +369,3 @@ func getArtistID(id int) artistInfo2 {
 
 
 
-
-//my resources
-
-//Understanding marshalling and unmarshalling
-//https://betterstack.com/community/guides/scaling-go/json-in-go/
-////https://webdamn.com/marshal-and-unmarshal-in-golang/
-//https://github.com/kingyam0/groupie-tracker/blob/main/main.go
-
-
-
