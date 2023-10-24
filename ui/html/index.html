@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Groupie-Tracker</title>
+    <link href="/ui/styles/styles.css" rel="stylesheet" type="text/css"/>
+
+   
+</head>
+
+<body>
+    <div class="heading">
+        <h1><span>Groupie - </span>Tracker</h1>
+    </div>
+    <br>
+        <div class="container">
+            {{range .}}
+            <div class="item">
+                <form action="/response" method="POST">
+                    <input type="image" src="{{.Image}}" class="imgBorder">
+                    <p><b>Name: </b>{{.Name}}</p>
+                    <p><b>Creation Date: </b>{{.CreationDate}}</p>
+                    <p><b>First Album: </b>{{.FirstAlbum}}</p>
+                    <input name="id" value="{{.ID}}" type="hidden">
+                    <input name="name" value="{{.Name}}" type="hidden">
+            </div>
+
+            </form>
+            {{end}}
+        </div>
+        
+        <footer>
+            <p>
+                By Ticha & Amir
+            </p>
+        </footer>
+
+</body>
