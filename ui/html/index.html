@@ -7,28 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Groupie-Tracker</title>
     <link href="/ui/styles/styles.css" rel="stylesheet" type="text/css"/>
-
-   
 </head>
-<nav>
+
+
+<nav class="navbar">
+    <div class="heading">
+        <h1><span>🅶🆁🅾🆄🅿🅸🅴 </span>  - 🆃🆁🅰🅲🅺🅴🆁</h1>
+    </div>
     <div class="toggle_button" id="btn"  >
         <span id="btn_text"  >Dark</span>
         <img src="/ui/images/moon.png" id="btn_image" />
     </div>
 </nav>
+
+
+
 <body>
-    <div class="heading">
-        <h1><span>Groupie - </span>Tracker</h1>
-    </div>
-    <br>
         <div class="container">
             {{range .}}
             <div class="item">
                 <form action="/response" method="POST">
-                    <input type="image" src="{{.Image}}" class="imgBorder">
-                    <p><b>Name: </b>{{.Name}}</p>
-                    <p><b>Creation Date: </b>{{.CreationDate}}</p>
-                    <p><b>First Album: </b>{{.FirstAlbum}}</p>
+                    <input type="image" src="{{.Image}}" >
+                    <p class="name"  ><b>Name: </b>{{.Name}}</p>
+                    <p class="creation_date"><b>Creation Date: </b>{{.CreationDate}}</p>
+                    <p class="first_album"><b>First Album: </b>{{.FirstAlbum}}</p>
                     <input name="id" value="{{.ID}}" type="hidden">
                     <input name="name" value="{{.Name}}" type="hidden">
             </div>
@@ -39,9 +41,12 @@
         
         <footer>
             <p>
-                By Ticha & Amir
+             Design with ❤️   By Ticha & Amir
             </p>
+            <p>&copy; 2023 Groupie-Tracker</p>
         </footer>
+
+
 
 
         <script>
